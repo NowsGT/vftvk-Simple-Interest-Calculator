@@ -1,25 +1,57 @@
 body {
-    background-color:black;
-    font-family:arial;
-    color:white
+  background-color: black;
+}
+
+h1 {
+
+  font-family:verdana;
+  padding-top: 1vw;
+  padding-bottom: 0;
+  text-align: center;
+  color: gray;
 }
 
 
-h1{
-    color:grey;
-    font-family:verdana;
+div {
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  margin: 2vw;
+  text-align: center;
+}
+#split {
+  padding-top: 0%;
+  margin: 0%;
+  display: inline-flex;
+  align-items: center;
 }
 
-.maindiv {
-    background-color:white;
-    color:black;
-    width:480px;
-    padding:20px;
-    border-radius:25px;
-    align:center
+#left {
+  text-align: left;
 }
 
-#result_style {
-    padding: 20px;
+#right {
+  text-align: left;
 }
 
+li {
+  margin: auto;
+  padding: 5;
+  list-style-type: none;
+}
+
+#result {
+  display: inline-block;
+  text-align: left;
+}
+
+#result-div {
+  padding-bottom: 0;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+
+button {
+  margin-top: 1vw;
+  align: right;
+}

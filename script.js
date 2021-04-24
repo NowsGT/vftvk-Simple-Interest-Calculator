@@ -1,24 +1,26 @@
-var principal = 0;
-var rate = 10.25;
-var years = 1;
-var interest = 0;
-var year = 1;
-var amount = 0;
+function compute() {
+  r = document.getElementById("rate").value;
+  p = document.getElementById("principal").value;
+  if (p < 0) {
+    alert("Principal must be a positive number.");
+    document.getElementById("principal").focus();
+    return;
+  } else if (p == 0) {
+    alert("Principal must be a positive number.");
+    document.getElementById("principal").focus();
+    return;
+  }
+  y = document.getElementById("years").value;
+  result = p * r * y * 0.01;
+  console.log(result);
+  toShow = `If you deposit <span style="background-color: yellow;">${p}</span><br />at an interest rate of <span style="background-color: yellow;">${r}</span>%<br />You will revieve an amount of <span style="background-color: yellow;">${result}</span> <br />in the year <span style="background-color: yellow;">${
+    2021 + Number(y)
+  }</span>`;
+  document.getElementById("result").innerHTML = toShow;
+}
 
-function compute(){
-    // gathering all of the values and calculations prior to printing result in order to avoid typeError
-    principal = document.getElementById("principal").value;
-    rate = document.getElementById("rate").value;
-    years = document.getElementById("years").value;
-    year = new Date().getFullYear()+parseInt(years);
-    interest = principal * years * rate /100;
-    amount = interest + parseFloat(principal);
-    // checking if principal is a negative number or 0, if not continue, if so alert
-    if (principal > 0) {
-                document.getElementById("result").innerHTML="If you deposit \<mark>"+principal+"\</mark>,\<br\>at an interest rate of \<mark>"+rate+"\</mark>%\<br\>You will receive an amount of \<mark>"+amount+"\</mark>,\<br\>in the year \<mark>"+year+"\</mark>,\<br\>";
-    }
-    else {
-        alert("Enter a positive number");
-        document.getElementById("principal").select();
-    }
+function updateRate() {
+  r = document.getElementById("rate").value;
+  console.log(r);
+  document.getElementById("rate-result").innerText = r + "%";
 }
