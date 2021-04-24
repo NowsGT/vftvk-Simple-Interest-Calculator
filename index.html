@@ -11,14 +11,14 @@
     <body>
             <h1>Simple Interest Calculator</h1>
 
-            Amount <input type="number" id="principal">
-                <br/>
+            Amount: &nbsp<input type="number" id="principal">
+                <br/><br/>
             <div class="container">
-                Rate <input type="range" id="rate" min="1" max="20" value="10.25" step="0.25">
+                Rate: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="range" id="rate" min="1" max="20" value="10.25" step="0.25">
                 <span id="rate_val">
                     10.25%
                 </span>
-                <br/>
+                <br/> <br/>
             </div>
 <!-- This script makes the rate slider work and display the updated rate value-->
             <script> 
@@ -42,9 +42,9 @@
                 <option value ="8">8</option>
                 <option value ="9">9</option>
                 <option value ="10">10</option>
-            </select> <br/>
+            </select> <br/> <br/>
             <!-- Where we compute interest with the compute function in script.js-->
-            <button onclick="compute()">Compute Interest</button><br>
+            <button style="border-radius: 4px" onclick="compute()">Compute Interest</button><br>
             <div id="result_style">
             <span id="result">
             
@@ -52,7 +52,7 @@
         </div>
     </body>
     <footer>
-        &#169; Everyone Can Get Rich
+        &#169; This Calculator belongs to Nowsath
     </footer>
         </div>
 
